@@ -13,7 +13,7 @@ name_on_order = st.text_input("Name On Smoothie")
 st.write("Name on your smoothie will be ", name_on_order)
 
 cnx = st.connection("snowflake")
-session = cnx.session();
+session = cnx.session()
 
 fruit_option_df = session.table("smoothies.public.fruit_options").select(col('Fruit_Name'))
 #st.dataframe(data = fruit_option_df, use_container_width = True) 
